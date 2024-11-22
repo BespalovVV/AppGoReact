@@ -14,7 +14,7 @@ FROM nginx:alpine
 
 # Копируем собранное приложение в директорию для Nginx
 COPY --from=builder /app/build /usr/share/nginx/html
-
+COPY nginx.conf /etc/nginx/nginx.conf
 # Открываем порт 80 для доступа
 EXPOSE 80
 
