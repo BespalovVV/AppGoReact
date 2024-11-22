@@ -1,0 +1,55 @@
+.custom-button {
+    background-color: transparent;
+    /* Прозрачный фон */
+    border: 2px solid;
+    /* Рамка будет установлена через модификаторы */
+    color: rgb(255, 0, 0);
+    /* Цвет текста */
+    font-size: 1.2rem;
+    /* Размер шрифта */
+    padding: 10px 20px;
+    /* Отступы */
+    border-radius: 5px;
+    /* Закруглённые углы */
+    cursor: pointer;
+    /* Курсор при наведении */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Плавные переходы */
+    outline: none;
+    /* Убираем контур при фокусе */
+}
+
+.custom-button.green {
+    border-color: #00ff00;
+    color: rgb(0, 255, 98);
+    /* Зелёная рамка */
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    /* Начальное свечение зелёным */
+}
+
+.custom-button.green:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 1);
+    /* Увеличенное свечение зелёным при наведении */
+}
+
+.custom-button.green:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    /* Свечение зелёным при фокусе */
+}
+
+.custom-button.red {
+    border-color: #ff0000;
+    /* Красная рамка */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    /* Начальное свечение красным */
+}
+
+.custom-button.red:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+    /* Увеличенное свечение красным при наведении */
+}
+
+.custom-button.red:focus {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    /* Свечение красным при фокусе */
+}

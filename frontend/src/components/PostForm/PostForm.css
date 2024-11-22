@@ -1,0 +1,34 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+    border: 1px solid #f07c7c;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #dcecc2;
+}
+
+.form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="file"],
+.form input[type="checkbox"] {
+    padding: 10px;
+    border: 1px solid #e98d8d;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.form div {
+    margin-bottom: 16px;
+}

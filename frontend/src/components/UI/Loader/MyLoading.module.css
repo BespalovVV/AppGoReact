@@ -1,0 +1,19 @@
+.loading {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px dashed #FF6F61;
+    animation: rotate 0.5s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(8deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(0.6);
+    }
+    100%{
+        transform: rotate(8deg) scale(1);
+    }
+}

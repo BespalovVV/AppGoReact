@@ -1,0 +1,32 @@
+.comment {
+    border: 1px solid #c8f8ad;
+    /* Обводка комментария */
+    padding: 10px;
+    /* Отступы */
+    margin: 10px 0;
+    /* Отступы между комментариями */
+    border-radius: 5px;
+    /* Скругление углов */
+    background-color: #ddebaa;
+    /* Цвет фона */
+}
+
+.comment-username {
+    font-weight: bold;
+    /* Жирный шрифт для имени пользователя */
+    color: #007bff;
+    /* Цвет ссылки */
+    text-decoration: none;
+    /* Убираем подчеркивание */
+}
+
+.comment-username:hover {
+    text-decoration: underline;
+    /* Подчеркивание при наведении */
+}
+
+.comment-text {
+    margin-top: 5px;
+    color: rgb(23, 88, 114);
+    /* Отступ сверху для текста комментария */
+}

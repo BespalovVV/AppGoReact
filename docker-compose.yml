@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: VLAD
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: Backend_golang
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # Инициализационный скрипт
+      - postgres_data:/var/lib/postgresql/data  # Для сохранения данных базы данных между перезапусками
+    ports:
+      - "5433:5433"
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    depends_on:
+      - postgres  # Указывает, что backend зависит от postgres
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:  # Сохраняем данные PostgreSQL
